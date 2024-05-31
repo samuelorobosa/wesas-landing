@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 #root {
-  max-width: 1280px;
+  /* max-width: 90%; */
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  overflow: hidden;
 }
 
 .logo {
@@ -22,6 +22,10 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.bg-custom-gradient {
+  background: linear-gradient(180deg, #f1f5f9 0%, rgba(255, 255, 255, 0) 100%);
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,12 +39,4 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
