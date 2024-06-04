@@ -16,7 +16,7 @@ import logo from '@/src/assets/logo.jpeg';
 
 export default function header() {
   return (
-    <header className='flex flex-row justify-between font-header border-b-2 px-12'>
+    <header className='flex flex-row justify-between font-header border-b-2 px-10'>
       <Sheet>
         <SheetTrigger asChild>
           <Button variant='outline' size='icon' className='lg:hidden my-5'>
