@@ -1,4 +1,3 @@
-import React from 'react';
 import logo from '@/src/assets/logo.jpeg';
 import {
   FaFacebook,
@@ -9,86 +8,233 @@ import {
 } from 'react-icons/fa';
 
 export default function footer() {
+  const date = new Date();
+  const year = date.getFullYear();
   return (
-    <footer className='text-gray-600 sm:px-20'>
-      <div className='flex flex-col lg:flex-row lg:justify-between px-10 sm:px-0 gap-10 sm:gap-20 font-body py-16 border-b-2 mb-2'>
-        <div className='flex flex-col gap-5 items-start'>
-          <h3 className='font-bold'>Categories</h3>
-          <a href='#'>User Interface</a>
-          <a href='#'>User Experience</a>
-          <a href='#'>Digital Media</a>
-          <a href='#'>Lifestyle</a>
-          <a href='#'>Programming</a>
-          <a href='#'>Animation</a>
+    <footer className="text-gray-600 sm:px-20">
+      <div className="flex flex-col lg:flex-row lg:justify-between px-10 sm:px-0 gap-10 sm:gap-20 font-body py-16 border-b-2 mb-2">
+        <div className="flex flex-col gap-5 items-start">
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www.temu.com/"
+            target="_blank"
+          >
+            Temu
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www.tesco.com/"
+            target="_blank"
+          >
+            Tesco
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www.amazon.co.uk/"
+            target="_blank"
+          >
+            Amazon
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www.jdsports.co.uk/"
+            target="_blank"
+          >
+            JD Sports
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www.shoezone.com/"
+            target="_blank"
+          >
+            Shoe Zone
+          </a>
         </div>
-        <div className='flex flex-col text-gray-600 gap-5 items-start'>
-          <h3 className='font-bold'>Product</h3>
-          <a href='#'>Pricing</a>
-          <a href='#'>Overview</a>
-          <a href='#'>Browse</a>
-          <a href='#'>Accessibility</a>
-          <a href='#'>Five</a>
-          <a href='#'>Changelong</a>
+        <div className="flex flex-col text-gray-600 gap-5 items-start">
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www.very.co.uk/"
+            target="_blank"
+          >
+            Very
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www.mandmdirect.com/"
+            target="_blank"
+          >
+            MandM
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www.4gadgets.co.uk/"
+            target="_blank"
+          >
+            4Gadgets
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www.sportsdirect.com/"
+            target="_blank"
+          >
+            Sports Direct
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www.shein.co.uk/"
+            target="_blank"
+          >
+            Shein
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://runwayboutique.co.uk/"
+            target="_blank"
+          >
+            Runway Boutique
+          </a>
         </div>
-        <div className='flex flex-col text-gray-600 gap-5 items-start'>
-          <h3 className='font-bold'>Solutions</h3>
-          <a href='#'>Brainstorming</a>
-          <a href='#'>Ideation</a>
-          <a href='#'>Wireframing</a>
-          <a href='#'>Research</a>
-          <a href='#'>Design</a>
-          <a href='#'>Concept</a>
+        <div className="flex flex-col text-gray-600 gap-5 items-start">
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www.backmarket.co.uk/en-gb"
+            target="_blank"
+          >
+            Back Market
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www.marksandspencer.com/"
+            target="_blank"
+          >
+            Marks and Spencer
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www.ebay.co.uk/"
+            target="_blank"
+          >
+            Ebay
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www.boohooplc.com/"
+            target="_blank"
+          >
+            Boohoo
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www.argos.co.uk/"
+            target="_blank"
+          >
+            Argos
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www.next.co.uk/"
+            target="_blank"
+          >
+            Next
+          </a>
         </div>
-        <div className='flex flex-col text-gray-600 gap-5 items-start'>
-          <h3 className='font-bold'>Resources</h3>
-          <a href='#'>Help Center</a>
-          <a href='#'>Blog</a>
-          <a href='#'>Tutorials</a>
-          <a href='#'>FAQs</a>
-          <a href='#'>Community</a>
-          <a href='#'>Events</a>
+        <div className="flex flex-col text-gray-600 gap-5 items-start">
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www.currys.co.uk/"
+            target="_blank"
+          >
+            Currys
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www.asda.com/"
+            target="_blank"
+          >
+            Asda
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www.asos.com/"
+            target="_blank"
+          >
+            ASOS
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www.johnlewis.com/"
+            target="_blank"
+          >
+            John Lewis
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            href="https://www2.hm.com/en_gb/index.html"
+            target="_blank"
+          >
+            H&M
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            target="_blank"
+            href="https://www.farfetch.com/"
+          >
+            Farfetch
+          </a>
         </div>
-        <div className='flex flex-col text-gray-600 gap-5 items-start'>
-          <h3 className='font-bold'>Support</h3>
-          <a href='#'>Contact Us</a>
-          <a href='#'>Developers</a>
-          <a href='#'>Documentation</a>
-          <a href='#'>Integrations</a>
-          <a href='#'>Reports</a>
-          <a href='#'>Webinar</a>
-        </div>
-        <div className='flex flex-col text-gray-600 gap-5 items-start'>
-          <h3 className='font-bold'>Company</h3>
-          <a href='#'>About</a>
-          <a href='#'>Press</a>
-          <a href='#'>Events</a>
-          <a href='#'>Careers</a>
-          <a href='#'>Customers</a>
-          <a href='#'>Partners</a>
+        <div className="flex flex-col text-gray-600 gap-5 items-start">
+          <a
+            className="hover:underline underline-offset-1"
+            target="_blank"
+            href="https://www.farfetch.com/"
+          >
+            House of Fraser
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            target="_blank"
+            href="https://www.prettylittlething.com/"
+          >
+            Pretty Little Thing
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            target="_blank"
+            href="https://www.newlook.com/row"
+          >
+            New Look
+          </a>
+          <a
+            className="hover:underline underline-offset-1"
+            target="_blank"
+            href="https://www.boden.co.uk/en-gb"
+          >
+            Boden
+          </a>
         </div>
       </div>
 
-      <div className='flex flex-col sm:flex-row items-center justify-between'>
-        <a href='#' prefetch={false}>
-          <img className='logo' src={logo} alt='WeShopAndShip logo' />
+      <div className="flex flex-col sm:flex-row items-center justify-between">
+        <a href="#">
+          <img className="logo" src={logo} alt="WeShopAndShip logo" />
         </a>
 
-        <p>WeShopAndShip @ 2023 All rights reserved</p>
+        <p>{`WeShopAndShip @ ${year} All rights reserved`}</p>
 
-        <div className='flex items-center gap-5 my-10 sm:mt-0'>
-          <a href='#'>
+        <div className="flex items-center gap-5 my-10 sm:mt-0">
+          <a href="#">
             <FaYoutube size={22} />
           </a>
-          <a href='#'>
+          <a href="#">
             <FaFacebook size={22} />
           </a>
-          <a href='#'>
+          <a href="#">
             <FaTwitter size={22} />
           </a>
-          <a href='#'>
+          <a href="#">
             <FaInstagram size={22} />
           </a>
-          <a href='#'>
+          <a href="#">
             <FaLinkedin size={22} />
           </a>
         </div>
