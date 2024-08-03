@@ -1,6 +1,5 @@
 import logo from '@/src/assets/logo.jpeg';
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
-import { IoMdMail } from 'react-icons/io';
 
 export default function footer() {
   const date = new Date();
@@ -220,20 +219,18 @@ export default function footer() {
 
         <p>{`WeShopAndShip @ ${year} All rights reserved`}</p>
 
-        <div className="flex items-center gap-5 my-10 sm:mt-0">
+        <div className="flex items-center gap-5 my-10 sm:my-0">
           <a href="https://web.facebook.com/weshopandship1">
             <FaFacebook size={22} />
-          </a>
-          <a href="#">
-            <IoMdMail size={22} />
           </a>
           <a href="https://www.instagram.com/weshopandship/">
             <FaInstagram size={22} />
           </a>
 
-          <a href="https://wa.me/2348136562626">
+          <a target="_blank" href="https://wa.me/+447778190602">
             <FaWhatsapp size={22} />
           </a>
+          <span>info@weshopandship.co.uk</span>
         </div>
       </div>
     </footer>
