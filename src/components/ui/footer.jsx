@@ -1,17 +1,16 @@
 import logo from '@/src/assets/logo.jpeg';
-import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaTwitter,
-  FaYoutube,
-} from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { IoMdMail } from 'react-icons/io';
 
 export default function footer() {
   const date = new Date();
   const year = date.getFullYear();
   return (
     <footer className="text-gray-600 sm:px-20">
+      <h2 className="font-bold sm:text-5xl text-3xl mb-4 epilogue-font mt-10 px-10 sm:px-0">
+        Featured Stores
+      </h2>
+      <p className="text-xl font-medium"></p>
       <div className="flex flex-col lg:flex-row lg:justify-between px-10 sm:px-0 gap-10 sm:gap-20 font-body py-16 border-b-2 mb-2">
         <div className="flex flex-col gap-5 items-start">
           <a
@@ -222,20 +221,18 @@ export default function footer() {
         <p>{`WeShopAndShip @ ${year} All rights reserved`}</p>
 
         <div className="flex items-center gap-5 my-10 sm:mt-0">
-          <a href="#">
-            <FaYoutube size={22} />
-          </a>
-          <a href="#">
+          <a href="https://web.facebook.com/weshopandship1">
             <FaFacebook size={22} />
           </a>
           <a href="#">
-            <FaTwitter size={22} />
+            <IoMdMail size={22} />
           </a>
-          <a href="#">
+          <a href="https://www.instagram.com/weshopandship/">
             <FaInstagram size={22} />
           </a>
-          <a href="#">
-            <FaLinkedin size={22} />
+
+          <a href="https://wa.me/2348136562626">
+            <FaWhatsapp size={22} />
           </a>
         </div>
       </div>

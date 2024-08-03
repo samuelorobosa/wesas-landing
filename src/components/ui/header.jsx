@@ -33,10 +33,17 @@ function MenuIcon(props) {
 
 export default function header() {
   return (
-    <header className="flex flex-row justify-between font-header border-b-2 px-10">
+    <header className="flex flex-row items-center justify-between font-header border-b-2 px-10">
       <Sheet>
+        <a className="lg:hidden" href="#">
+          <img className="logo" src={logo} alt="WeShopAndShip logo" />
+        </a>
         <SheetTrigger asChild>
-          <Button variant="outline" size="icon" className="lg:hidden my-5">
+          <Button
+            variant="outline"
+            size="icon"
+            className="lg:hidden my-5 ml-auto"
+          >
             <MenuIcon className="h-6 w-6" />
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
@@ -158,13 +165,13 @@ export default function header() {
       <div className="hidden lg:flex items-center gap-4">
         <Button
           variant="default"
-          className="bg-blue-600 hover:text-blue-600 hover:bg-white"
+          className="bg-blue hover:text-blue-600 hover:bg-primary-tint-300 flex items-center inter-font"
         >
           <a href="/login">Login</a>
         </Button>
         <Button
           variant="default"
-          className="bg-blue-600 hover:text-blue-600 hover:bg-white"
+          className="bg-blue hover:text-blue-600 hover:bg-primary-tint-300 flex items-center inter-font"
         >
           <a href="/login">Get Started</a>
         </Button>
