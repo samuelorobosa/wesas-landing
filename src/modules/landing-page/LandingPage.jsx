@@ -91,7 +91,7 @@ export default function LandingPage() {
                 efficient international delivery.
               </p>
             </div>
-            <div className="flex flex-col justify-center items-center sm:w-[30%]">
+            <div className="flex flex-col justify-center items-center sm:w-[30%] text-center">
               <img src={secondIcon} alt="icon" width={80} height={80} />
               <h2 className="font-bold text-xl py-3">Pay Supplier Service</h2>
               <p className="">
@@ -100,7 +100,7 @@ export default function LandingPage() {
                 our UK warehouse, and manage efficient delivery to your address.
               </p>
             </div>
-            <div className="flex flex-col justify-center items-center sm:w-[30%]">
+            <div className="flex flex-col justify-center items-center sm:w-[30%] text-center">
               <img src={thirdIcon} alt="icon" width={80} height={80} />
               <h2 className="font-bold text-xl py-3">
                 Express Courier Service
@@ -115,18 +115,8 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/*<div className="py-12 px-10 sm:px-0 text-center">*/}
-        {/*  <h2 className="font-bold text-5xl mb-4 epilogue-font">*/}
-        {/*    Focus on what Matters.*/}
-        {/*  </h2>*/}
-        {/*  <p className="text-xl font-medium">*/}
-        {/*    Optimize your international shopping with WeShopAndShip—simple,*/}
-        {/*    efficient, and tailored to your needs. Contact Us now to find out*/}
-        {/*    more.*/}
-        {/*  </p>*/}
-        {/*</div>*/}
-
         <section
+          id="about"
           className={`font-body px-10 sm:px-20 py-14 gap-x-16 flex flex-col sm:flex-row-reverse items-center justify-between`}
         >
           <div className="sm:w-[50%] text-start mb-16 sm:mb-0">
@@ -186,7 +176,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24 lg:py-16">
+        <section id="services" className="w-full py-12 md:py-24 lg:py-16">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -431,7 +421,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <div className=" bg-[#F1F5F9]">
+        <div id="testimonials" className="bg-[#F1F5F9]">
           <Carousel
             className="py-20 w-full sm:w-1/2 px-10 mx-auto"
             plugins={[
@@ -562,7 +552,7 @@ export default function LandingPage() {
           </Carousel>
         </div>
 
-        <div className="mt-20 mb-16 px-10 sm:px-0 ">
+        <div id="faq" className="mt-20 mb-16 px-10 sm:px-0 ">
           <h2 className="font-bold sm:text-5xl text-3xl mb-4 epilogue-font text-center">
             Questions You May Ask About WeShopAndShip Services
           </h2>
@@ -711,7 +701,7 @@ export default function LandingPage() {
 
             <div className="mt-7 flex gap-3 items-center">
               <Button
-                className="bg-blue hover:text-blue-600 hover:bg-white w-[150px] sm:w-[225px] py-7 sm:px-8 px-6"
+                className="bg-blue hover:text-blue-600 hover:bg-primary-tint-300 w-[150px] sm:w-[225px] py-7 sm:px-8 px-6"
                 asChild
               >
                 <a href="/login" className="text-xl">

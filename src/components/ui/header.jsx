@@ -1,14 +1,7 @@
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from '@/src/components/ui/navigation-menu';
-import { Sheet, SheetContent, SheetTrigger } from '@/src/components/ui/sheet';
 import { Button } from '@/src/components/ui/button';
 import logo from '@/src/assets/logo.jpeg';
+import { useState } from 'react';
+import { Sheet, SheetContent } from '@/src/components/ui/sheet.jsx';
 
 function MenuIcon(props) {
   return (
@@ -31,58 +24,103 @@ function MenuIcon(props) {
   );
 }
 
-export default function header() {
+export default function Header() {
+  const [open, setOpen] = useState(false);
+  const scrollTo = (id) => {
+    if (open) setOpen(false);
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  };
   return (
-    <header className="flex flex-row items-center justify-between font-header border-b-2 px-10">
-      <Sheet>
+    <>
+      <header className="flex flex-row items-center justify-between font-header border-b-2 px-6">
         <a className="lg:hidden" href="#">
           <img className="logo" src={logo} alt="WeShopAndShip logo" />
         </a>
-        <SheetTrigger asChild>
+        <Button
+          onClick={() => setOpen(true)}
+          variant="outline"
+          size="icon"
+          className="lg:hidden my-5 ml-auto"
+        >
+          <MenuIcon className="h-6 w-6" />
+          <span className="sr-only">Toggle navigation menu</span>
+        </Button>
+        <div className="hidden lg:flex">
+          <a href="#">
+            <img className="logo" src={logo} alt="WeShopAndShip logo" />
+          </a>
+          <div className="px-10 flex flex-row gap-5 items-center">
+            <span
+              onClick={() => scrollTo('about')}
+              className="font-medium inter-font text-sm cursor-pointer"
+            >
+              About Us
+            </span>
+            <span
+              onClick={() => scrollTo('services')}
+              className="font-medium inter-font text-sm cursor-pointer"
+            >
+              Services
+            </span>
+            <span
+              onClick={() => scrollTo('testimonials')}
+              className="font-medium inter-font text-sm cursor-pointer"
+            >
+              Testimonials
+            </span>
+            <span
+              onClick={() => scrollTo('faq')}
+              className="font-medium inter-font text-sm cursor-pointer"
+            >
+              FAQ
+            </span>
+          </div>
+        </div>
+        <div className="hidden lg:flex items-center gap-4">
           <Button
-            variant="outline"
-            size="icon"
-            className="lg:hidden my-5 ml-auto"
+            variant="default"
+            className="bg-blue hover:text-blue-600 hover:bg-primary-tint-300 flex items-center inter-font"
           >
-            <MenuIcon className="h-6 w-6" />
-            <span className="sr-only">Toggle navigation menu</span>
+            <a href="/login">Login</a>
           </Button>
-        </SheetTrigger>
+          <Button
+            variant="default"
+            className="bg-blue hover:text-blue-600 hover:bg-primary-tint-300 flex items-center inter-font"
+          >
+            <a href="/login">Get Started</a>
+          </Button>
+        </div>
+      </header>
+      <Sheet open={open} onOpenChange={setOpen}>
         <SheetContent side="left">
           <a href="#">
             <img className="logo" src={logo} alt="WeShopAndShip logo" />
           </a>
           <div className="grid gap-2 py-6">
-            <a
-              href="#"
-              className="flex w-full items-center py-2 text-lg font-semibold"
+            <span
+              onClick={() => scrollTo('about')}
+              className="font-semibold inter-font text-lg py-2 cursor-pointer"
             >
-              Products
-            </a>
-            <a
-              href="#"
-              className="flex w-full items-center py-2 text-lg font-semibold"
+              About Us
+            </span>
+            <span
+              onClick={() => scrollTo('services')}
+              className="font-semibold inter-font text-lg py-2 cursor-pointer"
             >
-              Business Solutions
-            </a>
-            <a
-              href="#"
-              className="flex w-full items-center py-2 text-lg font-semibold"
+              Services
+            </span>
+            <span
+              onClick={() => scrollTo('testimonials')}
+              className="font-semibold inter-font text-lg py-2 cursor-pointer"
             >
-              Help Center
-            </a>
-            <a
-              href="#"
-              className="flex w-full items-center py-2 text-lg font-semibold"
+              Testimonials
+            </span>
+            <span
+              onClick={() => scrollTo('faq')}
+              className="font-semibold inter-font text-lg py-2 cursor-pointer"
             >
-              Pricing
-            </a>
-            <a
-              href="#"
-              className="flex w-full items-center py-2 text-lg font-semibold"
-            >
-              Login
-            </a>
+              FAQ
+            </span>
           </div>
           <Button
             className="bg-blue-600 hover:text-blue-600 hover:bg-white"
@@ -92,90 +130,6 @@ export default function header() {
           </Button>
         </SheetContent>
       </Sheet>
-      <div className="hidden lg:flex">
-        <a href="#">
-          <img className="logo" src={logo} alt="WeShopAndShip logo" />
-        </a>
-        <div className="px-10 flex flex-row gap-5">
-          <NavigationMenu className="hidden lg:flex">
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="font-medium inter-font">
-                  Products
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <NavigationMenuLink asChild className="px-4 py-2 m-0">
-                    <a
-                      target="_blank"
-                      href="https://www.google.com/"
-                      className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2"
-                    >
-                      Link
-                    </a>
-                  </NavigationMenuLink>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="font-medium inter-font">
-                  Business Solutions
-                </NavigationMenuTrigger>
-                <NavigationMenuContent className="">
-                  <NavigationMenuLink asChild className="px-4 py-2 m-0">
-                    <a
-                      href="#"
-                      className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2"
-                    >
-                      Link
-                    </a>
-                  </NavigationMenuLink>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="font-medium inter-font">
-                  Help Center
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <NavigationMenuLink asChild className="px-4 py-2 m-0">
-                    <a
-                      href="#"
-                      className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2"
-                    >
-                      Link
-                    </a>
-                  </NavigationMenuLink>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <a href="/pricing">
-                <NavigationMenuLink className="font-medium inter-font text-sm">
-                  Pricing
-                </NavigationMenuLink>
-              </a>{' '}
-            </NavigationMenuList>
-          </NavigationMenu>
-        </div>
-      </div>
-      <div className="hidden lg:flex items-center gap-4">
-        <Button
-          variant="default"
-          className="bg-blue hover:text-blue-600 hover:bg-primary-tint-300 flex items-center inter-font"
-        >
-          <a href="/login">Login</a>
-        </Button>
-        <Button
-          variant="default"
-          className="bg-blue hover:text-blue-600 hover:bg-primary-tint-300 flex items-center inter-font"
-        >
-          <a href="/login">Get Started</a>
-        </Button>
-      </div>
-    </header>
+    </>
   );
 }
