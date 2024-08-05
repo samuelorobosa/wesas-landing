@@ -25,18 +25,17 @@ import {
 } from '@/src/components/ui/accordion';
 import {
   BoxIcon,
-  CreditCardIcon,
   GlobeIcon,
+  Monitor,
   PackageIcon,
   PlaneIcon,
-  SearchIcon,
   ShieldIcon,
   ShoppingCartIcon,
   StarIcon,
   TruckIcon,
-  UserIcon,
   WalletIcon,
 } from 'lucide-react';
+import { GiPadlock } from 'react-icons/gi';
 
 export default function LandingPage() {
   return (
@@ -352,7 +351,7 @@ export default function LandingPage() {
         <section className="bg-muted py-12 md:py-20 lg:py-24">
           <div className="container px-4 md:px-6">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl sm:text-5xl text-3xl">
+              <h2 className="font-bold tracking-tighter sm:text-5xl text-3xl">
                 5 Simple Steps to Use WeShopAndShip
               </h2>
               <p className="mt-4 text-muted-foreground md:text-xl/relaxed">
@@ -363,12 +362,16 @@ export default function LandingPage() {
             <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
               <div className="flex flex-col items-center gap-4">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue text-primary-foreground">
-                  <SearchIcon className="h-8 w-8" />
+                  <WalletIcon className="h-8 w-8" />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-lg font-semibold">Find Products</h3>
+                  <h3 className="text-lg font-semibold">
+                    Create Your Account and Fund Your Wallet
+                  </h3>
                   <p className="mt-2 text-muted-foreground">
-                    Browse our vast selection of products from top brands.
+                    Start by signing up for a WeShopAndShip account. Use our
+                    convenient “Add Fund” options to add money to your wallet
+                    for hassle-free transactions.
                   </p>
                 </div>
               </div>
@@ -377,20 +380,26 @@ export default function LandingPage() {
                   <ShoppingCartIcon className="h-8 w-8" />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-lg font-semibold">Add to Cart</h3>
+                  <h3 className="text-lg font-semibold">
+                    Shop and Place Your Order
+                  </h3>
                   <p className="mt-2 text-muted-foreground">
-                    Easily add the items you want to your shopping cart.
+                    Browse our range of featured shops and copy the product
+                    links for items you want to purchase. Complete the “Place
+                    Order” form with your order details and preferences.
                   </p>
                 </div>
               </div>
               <div className="flex flex-col items-center gap-4">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue text-primary-foreground">
-                  <CreditCardIcon className="h-8 w-8" />
+                  <Monitor className="h-8 w-8" />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-lg font-semibold">Secure Checkout</h3>
+                  <h3 className="text-lg font-semibold">Monitor Your Orders</h3>
                   <p className="mt-2 text-muted-foreground">
-                    Complete your purchase with our safe and reliable checkout.
+                    Wait for notifications about your order deliveries. You can
+                    track the status of your orders through your WeShopAndShip
+                    dashboard for real-time updates.
                   </p>
                 </div>
               </div>
@@ -399,21 +408,26 @@ export default function LandingPage() {
                   <TruckIcon className="h-8 w-8" />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-lg font-semibold">Worldwide Shipping</h3>
+                  <h3 className="text-lg font-semibold">Request Shipping</h3>
                   <p className="mt-2 text-muted-foreground">
-                    We deliver your items to your doorstep, anywhere in the
-                    world.
+                    Once all your orders are marked as “Received,” request
+                    shipping from your dashboard. We will then package and
+                    dispatch all your items to your specified address.
                   </p>
                 </div>
               </div>
               <div className="flex flex-col items-center gap-4">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue text-primary-foreground">
-                  <UserIcon className="h-8 w-8" />
+                  <GiPadlock className="h-8 w-8" />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-lg font-semibold">Dedicated Support</h3>
+                  <h3 className="text-lg font-semibold">
+                    {' '}
+                    Enjoy Fast and Secure Delivery
+                  </h3>
                   <p className="mt-2 text-muted-foreground">
-                    Our team is here to assist you every step of the way.
+                    Sit back and relax while we ensure your parcel is delivered
+                    to your address quickly and safely.
                   </p>
                 </div>
               </div>
