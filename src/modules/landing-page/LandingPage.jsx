@@ -60,7 +60,7 @@ export default function LandingPage() {
 
             <div className="mt-5 flex gap-3 items-center">
               <Button className="bg-blue hover:bg-primary-tint-300">
-                <a href="/login" className="">
+                <a href="https://app.weshopandship.co.uk/register" className="">
                   Get Started
                 </a>
               </Button>
@@ -718,7 +718,10 @@ export default function LandingPage() {
                 className="bg-blue hover:text-blue-600 hover:bg-primary-tint-300 w-[150px] sm:w-[225px] py-7 sm:px-8 px-6"
                 asChild
               >
-                <a href="/login" className="text-xl">
+                <a
+                  href="https://app.weshopandship.co.uk/register"
+                  className="text-xl"
+                >
                   Get Started
                 </a>
               </Button>

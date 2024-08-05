@@ -81,13 +81,13 @@ export default function Header() {
             variant="default"
             className="bg-blue hover:text-blue-600 hover:bg-primary-tint-300 flex items-center inter-font"
           >
-            <a href="/login">Login</a>
+            <a href="https://app.weshopandship.co.uk/login">Login</a>
           </Button>
           <Button
             variant="default"
             className="bg-blue hover:text-blue-600 hover:bg-primary-tint-300 flex items-center inter-font"
           >
-            <a href="/login">Get Started</a>
+            <a href="https://app.weshopandship.co.uk/register">Get Started</a>
           </Button>
         </div>
       </header>
